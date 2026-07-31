@@ -4,7 +4,8 @@ The main one answers a company's phone line in production and carries the sale e
 
 Here:
 
-- [grounded-check](https://github.com/teal-sea/grounded-check): audits what a voice agent said against what its tools actually returned. Born from a quality monitor that flagged around 35 correct quotes as fabricated.
+- [grounded-check](https://github.com/teal-sea/grounded-check): audits what a voice agent said against what its tools actually returned, with a deterministic pass for numbers and an LLM judge fed the tool timeline as ground truth. Born from a quality monitor that flagged around 35 correct quotes as fabricated.
+- [convai-webhook-guard](https://github.com/teal-sea/convai-webhook-guard): verify ElevenLabs post-call webhooks before you trust them. Constant-time HMAC check, plus a sign command so you can test your own receiver with curl.
 - [too-soon](https://github.com/teal-sea/too-soon): refuses to call an A/B test winner on a sample too small to carry one.
 - [Why your AI startup dies at customer six](https://github.com/teal-sea/why-your-ai-startup-dies-at-customer-six): an essay on why bespoke deployments stop scaling, and the three-layer split that fixes it.
 
