@@ -1,6 +1,6 @@
 # Thomas Lince
 
-I’m a forward-deployed engineer building AI systems that operate in the real world — and the verification machinery that makes them trustworthy.
+I’m a forward-deployed engineer building AI systems that operate in the real world and the verification machinery that makes them trustworthy.
 
 I came into this from operations, not research. I run production systems where AI agents answer customers, read live business state, quote, take payments, write back to operational systems, and coordinate fulfillment.
 
