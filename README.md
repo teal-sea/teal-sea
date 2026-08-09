@@ -1,77 +1,96 @@
 # Thomas Lince
 
-I build AI systems that operate in the real world — and the tools that keep them from quietly doing the wrong thing.
+I’m a forward-deployed engineer building AI systems that operate in the real world — and the verification machinery that makes them trustworthy.
 
-Most of my projects start the same way: something breaks in production, I figure out why, and the fix turns into something reusable.
+I came into this from operations, not research. I run production systems where AI agents answer customers, read live business state, quote, take payments, write back to operational systems, and coordinate fulfillment.
 
-## Production AI
+The model can reason.
 
-I run operations for a business where an AI agent answers the phone and can carry a sale from discovery through quoting, payment, and booking.
+**It does not get to be its own authority.**
 
-The model handles the conversation. Pricing, availability, payments, business rules, and writes stay behind deterministic tools and endpoints.
+That principle shows up in most of what I build: deterministic boundaries around agents, explicit business semantics and actions, adversarial evals, grounded judges, and systems designed to catch confident failure before a customer does.
 
-That separation — **reasoning in the model, authority in the system** — is the architectural theme behind most of what I build.
+## Production systems
 
-## Tools from production failure modes
+My main production work is an agent-operated sales and operations stack running across multiple US markets.
+
+The agents handle conversations and coordinate workflows. Pricing, availability, payments, state transitions, business rules, and writes remain behind controlled tools and endpoints.
+
+The architecture I keep coming back to is simple:
+
+**agents propose; systems decide what they are entitled to do.**
+
+## Verification
 
 ### [grounded-check](https://github.com/teal-sea/grounded-check)
 
-Audit what an AI agent said against what its tools actually returned.
+Audits what a conversational AI agent said against what its tools actually returned.
 
-Built after a production quality monitor flagged dozens of correct quotes as hallucinations because it could see the transcript but not the ground truth the agent had received.
-
-### [convai-webhook-guard](https://github.com/teal-sea/convai-webhook-guard)
-
-Verify ElevenLabs post-call webhooks before downstream systems trust them.
-
-Small, boring infrastructure. Exactly the kind you want to be boring.
+It came out of a production failure where a transcript-only quality monitor flagged dozens of correct quotes as fabricated because it could see what the agent said but not the ground truth the agent had received.
 
 ### [too-soon](https://github.com/teal-sea/too-soon)
 
-A tiny guardrail for A/B tests that refuses to call a winner before the sample can support one.
+A small statistical guardrail that refuses to call an A/B test winner before the evidence can support one.
 
-Because a number looking decisive and a number being decisive are different things.
+### [convai-webhook-guard](https://github.com/teal-sea/convai-webhook-guard)
+
+Verifies ElevenLabs post-call webhooks before downstream systems trust them.
+
+Small infrastructure, but part of the same rule:
+
+**claims about reality need an independent way to be checked.**
 
 ## Architecture
 
 ### [Why your AI startup dies at customer six](https://github.com/teal-sea/why-your-ai-startup-dies-at-customer-six)
 
-An essay about the point where bespoke AI deployments stop scaling.
+An essay about the point where forward deployments stop compounding and start turning into bespoke software.
 
-The model I use separates a system into:
+The model separates a deployment into:
 
 * **semantic layer** — what things are
 * **kinetic layer** — what can be done
-* **rulebook** — where each customer is allowed to differ
+* **rulebook** — where a deployment is allowed to differ
 
-The goal is to make customer-specific behavior configuration rather than customer-specific software.
+The goal is not to eliminate custom deployment work.
 
-## Research
+It is to make every deployment teach the platform what should become reusable.
+
+## Zeta Lab
 
 ### [zeta-lab](https://github.com/teal-sea/zeta-lab)
 
-A computational and formal laboratory around the Riemann Hypothesis.
+Zeta Lab began as a computational and formal laboratory around the Riemann Hypothesis.
 
-It includes arbitrary-precision numerics, classical analytic-number-theory machinery, Lean proofs, and a falsification harness built around a broader idea I care about:
+It has become the proving ground for a broader verification architecture.
 
-> When generating plausible claims becomes cheap, reliable rejection becomes infrastructure.
+The lab reconstructs classical analytic-number-theory machinery at arbitrary precision, develops formal results in Lean, and runs generated claims against standing adversarial batteries designed to kill them.
 
-No RH proof claims. Quite the opposite: the lab is designed to kill bad ideas quickly and preserve the evidence.
+Those batteries use several kinds of attack:
+
+* **rivals** — does the supposed explanation also work somewhere the property is absent?
+* **decoys** — does changing the real input actually change the result?
+* **surrogates** — can a null model reproduce the observation?
+* **lesions** — if a failure is deliberately planted, does the detector notice?
+
+The verifier itself must also be calibrated in both directions: it has to kill claims known to be bad and pass claims known to be sound.
+
+The important part is that the core protocol is being separated from the subject matter.
+
+Number theory is the first hostile deployment environment, not the intended boundary of the idea.
+
+> **When generating plausible claims becomes cheap, reliable rejection becomes infrastructure.**
 
 ## Elsewhere
 
 ### [modalruns.com](https://modalruns.com)
 
-A browser-based guitar practice app for exploring modes over evolving drones and harmony.
+A browser-based guitar practice app for exploring modes over evolving harmony.
 
 Built, launched, and monetized.
 
 ---
 
-### What I keep coming back to
+I’m interested in the part of AI deployment that starts after the demo works:
 
-**Autonomous systems. Deterministic boundaries. Adversarial testing. Reliable rejection.**
-
-Build things that can act.
-
-Then build the machinery that tells you when they're wrong.
+**What does the system mean? What is the agent allowed to do? How do we know the deployment is actually working? And what becomes reusable when we leave?**
