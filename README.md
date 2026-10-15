@@ -24,6 +24,14 @@ The general pattern is:
 
 ## Verification
 
+### [lean-checked-network](https://github.com/teal-sea/lean-checked-network)
+
+A small neural network, trained on half of a modular-addition table, proved correct on every input with Lean 4.
+
+Most model evaluation samples inputs and reports a score. This network’s input space is small enough to cover completely, so the result is a theorem instead: Lean’s kernel checks that the network gives the right answer on all 12,769 inputs, including the 6,385 it never saw in training.
+
+A second theorem tests the explanation of how it works. Each neuron places numbers on a circle and the network adds angles; keep only that circle part of every neuron and the network is still provably right everywhere. A deliberately broken copy is rejected by the same proof, and every check reruns on each push.
+
 ### [grounded-check](https://github.com/teal-sea/grounded-check)
 
 Checks what a conversational AI agent said against what its tools actually returned.
