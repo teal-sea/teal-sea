@@ -2,14 +2,14 @@
 
 I build production AI agents, voice automation and tools for checking whether their outputs are correct.
 
-[Website](https://teal-sea.com/) · [LinkedIn / contact](https://www.linkedin.com/in/thomaslince) · [LimoCity work account](https://github.com/tlince)
+[Website](https://teal-sea.com/) · [LinkedIn / contact](https://www.linkedin.com/in/thomaslince)
 
 ## Selected work
 
 - **Production agent evaluation — [grounded-check](https://github.com/teal-sea/grounded-check):** checks a voice agent's claims against the data its tools returned. [Run the keyless demo](https://github.com/teal-sea/grounded-check#usage).
 - **Agent orchestration — [ostoyae](https://github.com/teal-sea/ostoyae):** runs coding agents over a graph that grows as they find work. [Try the scripted demo](https://github.com/teal-sea/ostoyae#try-it), with no API key or model calls.
 - **Formal verification — [lean-checked-network](https://github.com/teal-sea/lean-checked-network):** Lean 4 proves a trained, frozen integer-weight network adds modulo 113 correctly on all 12,769 inputs, including 6,385 held out from training. The circle-only mechanism is also checked; a planted fault is rejected. These proofs concern the specified network and finite task.
-- **Open source — [Hardy's Z function in mathlib](https://github.com/leanprover-community/mathlib4/pull/42963):** contributed the function and supporting results, with AI assistance disclosed in the PR. [Merged by Bors on 10 October 2026](https://github.com/leanprover-community/mathlib4/pull/42963#issuecomment-6098344268).
+- **Open source — [Hardy's Z function in mathlib](https://github.com/leanprover-community/mathlib4/pull/42963):** contributed the function and supporting results. [Merged by Bors on 10 October 2026](https://github.com/leanprover-community/mathlib4/pull/42963#issuecomment-6098344268).
 
 ## More tools and research
 
