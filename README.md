@@ -1,6 +1,6 @@
 # Thomas Lince
 
-I build production AI agents, voice automation and tools for checking whether their outputs are correct.
+I build software products and systems that turn ambitious ideas into working, verifiable results. My work spans business automation, agent orchestration and computational mathematics.
 
 [Website](https://teal-sea.com/) · [LinkedIn / contact](https://www.linkedin.com/in/thomaslince)
 
