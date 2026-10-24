@@ -6,11 +6,11 @@ I build software products and systems that turn ambitious ideas into working, ve
 
 ## Selected work
 
-- **Production agent evaluation — [grounded-check](https://github.com/teal-sea/grounded-check):** checks a voice agent's claims against the data its tools returned. [Run the keyless demo](https://github.com/teal-sea/grounded-check#usage).
-- **Agent orchestration — [ostoyae](https://github.com/teal-sea/ostoyae):** runs coding agents over a graph that grows as they find work. [Try the scripted demo](https://github.com/teal-sea/ostoyae#try-it), with no API key or model calls.
+- **Production agent evaluation: [grounded-check](https://github.com/teal-sea/grounded-check):** checks a voice agent's claims against the data its tools returned. [Run the keyless demo](https://github.com/teal-sea/grounded-check#usage).
+- **Agent orchestration: [ostoyae](https://github.com/teal-sea/ostoyae):** runs coding agents over a graph that grows as they find work. [Try the scripted demo](https://github.com/teal-sea/ostoyae#try-it), with no API key or model calls.
 - **Formal verification: [lean-checked-network](https://github.com/teal-sea/lean-checked-network):** Lean and an independent checker verify that a trained one-layer, four-head transformer with integer weights and exact real softmax adds modulo 113 on all 12,769 inputs. This is a tiny model on a toy task, checked by brute force over all inputs, and concerns the integer-rounded model, not the float checkpoint. Earlier MLP proofs check every answer and the circle-only mechanism; a planted fault is rejected.
 - **ACAS certificate checking: [Lean evidence](https://github.com/teal-sea/lean-checked-network/blob/main/acas/README.md):** AI agents built a Lean check of an alpha-beta-CROWN certificate for ACAS Xu network 1_1, property 1 (VNN-COMP), using TorchLean. Exact real semantics, standard axioms only; the ONNX importer is audited, not proved. No IEEE or aircraft claims.
-- **Open source — [Hardy's Z function in mathlib](https://github.com/leanprover-community/mathlib4/pull/42963):** contributed the function and supporting results. [Merged by Bors on 10 October 2026](https://github.com/leanprover-community/mathlib4/pull/42963#issuecomment-6098344268).
+- **Open source: [Hardy's Z function in mathlib](https://github.com/leanprover-community/mathlib4/pull/42963):** contributed the function and supporting results. [Merged by Bors on 10 October 2026](https://github.com/leanprover-community/mathlib4/pull/42963#issuecomment-6098344268).
 
 ## More tools and research
 
@@ -29,7 +29,7 @@ That experience has made me conservative about what should be left to a model. A
 
 ## Writing and products
 
-- **[Why your AI startup dies at customer six](https://github.com/teal-sea/why-your-ai-startup-dies-at-customer-six):** an essay on reusable deployment architecture — the semantic layer, kinetic layer and rulebook.
+- **[Why your AI startup dies at customer six](https://github.com/teal-sea/why-your-ai-startup-dies-at-customer-six):** an essay on reusable deployment architecture: the semantic layer, kinetic layer and rulebook.
 - **[ModalRuns](https://modalruns.com):** a browser-based guitar practice app for exploring modes over changing harmony. Built, launched and monetized.
 
 For a conversation about AI systems, voice automation, evaluation or verification, [get in touch on LinkedIn](https://www.linkedin.com/in/thomaslince) or visit [teal-sea.com](https://teal-sea.com/).
