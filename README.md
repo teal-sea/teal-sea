@@ -1,11 +1,12 @@
 # Thomas Lince
 
-I build software products and systems that turn ambitious ideas into working, verifiable results. My work spans business automation, agent orchestration and computational mathematics.
+I build and verify production AI systems at the intersection of forward-deployed engineering and formal verification (Lean 4). I ship operational software across live customer voice, bookings, and payments, and check critical code and models with machine-checked specs.
 
 [Website](https://teal-sea.com/) · [LinkedIn / contact](https://www.linkedin.com/in/thomaslince)
 
 ## Selected work
 
+- **Rust inference verification (private, walkthrough on request):** safe Rust two-layer causal inference engine translated to Lean 4 via Charon and Aeneas, proving exact logits and next-token outputs against the integer spec without panics or overflow; independently rechecked with NanoDa, with mutation tests confirming Lean rejects broken Rust builds, and compiled to WebAssembly.
 - **Production agent evaluation: [grounded-check](https://github.com/teal-sea/grounded-check):** checks a voice agent's claims against the data its tools returned. [Run the keyless demo](https://github.com/teal-sea/grounded-check#usage).
 - **Agent orchestration: [ostoyae](https://github.com/teal-sea/ostoyae):** runs coding agents over a graph that grows as they find work. [Try the scripted demo](https://github.com/teal-sea/ostoyae#try-it), with no API key or model calls.
 - **Formal verification: [lean-checked-network](https://github.com/teal-sea/lean-checked-network):** Lean and an independent checker verify that a trained one-layer, four-head transformer with integer weights and exact real softmax adds modulo 113 on all 12,769 inputs. This is a tiny model on a toy task, checked by brute force over all inputs, and concerns the integer-rounded model, not the float checkpoint. Earlier MLP proofs check every answer and the circle-only mechanism; a planted fault is rejected.
@@ -16,7 +17,7 @@ I build software products and systems that turn ambitious ideas into working, ve
 
 - **[omission-check](https://github.com/teal-sea/omission-check):** detects required replies and tool calls that never happen. Complements grounded-check's checks on spoken claims. [Run the bundled demo](https://github.com/teal-sea/omission-check#quick-start): Python 3.10+, no network, model or dependencies.
 - **[convai-webhook-guard](https://github.com/teal-sea/convai-webhook-guard):** verifies ElevenLabs post-call webhook signatures before downstream systems trust the envelope; includes local signing tests.
-- **[zeta-lab](https://github.com/teal-sea/zeta-lab) · [research site](https://zeta.teal-sea.com):** computational number theory and Lean 4 formalization, combining checked proofs, rigorous numerics and negative controls around the Riemann zeta function. Makes no claim of progress toward RH.
+- **[zeta-lab](https://github.com/teal-sea/zeta-lab) · [research site](https://zeta.teal-sea.com):** computational number theory and Lean 4 formalization around the Riemann zeta function, including a kernel-checked proof that all 29 critical-strip zeros up to height 100 are simple and on the critical line, alongside rigorous numerics and negative controls. Makes no claim of progress toward RH.
 - **[too-soon](https://github.com/teal-sea/too-soon):** a small A/B-test utility using Wilson intervals, with no dependencies.
 
 ## Production background
